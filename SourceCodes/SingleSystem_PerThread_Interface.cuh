@@ -205,6 +205,10 @@ class ProblemSolver
 		void SynchroniseDevice();
 		void InsertSynchronisationPoint();
 		void SynchroniseSolver();
+
+		int* 	   GetDenseOutputIndex();
+		Precision* GetDenseOutputTimeIntances();
+		Precision* GetDenseOutputStates();
 };
 
 
