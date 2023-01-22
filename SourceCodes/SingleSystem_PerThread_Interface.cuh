@@ -1315,6 +1315,25 @@ void ProblemSolver<NT,SD,NCP,NSP,NISP,NE,NA,NIA,NDO,Algorithm,Precision>::Synchr
 	gpuErrCHK( cudaEventSynchronize(Event) );
 }
 
+// FUNCTIONS to retrieve Dense Output informations
+template <int NT, int SD, int NCP, int NSP, int NISP, int NE, int NA, int NIA, int NDO, Algorithms Algorithm, class Precision>
+int* ProblemSolver<NT,SD,NCP,NSP,NISP,NE,NA,NIA,NDO,Algorithm,Precision>::GetDenseOutputIndex() 
+{
+	return this->h_DenseOutputIndex;
+}
+
+template <int NT, int SD, int NCP, int NSP, int NISP, int NE, int NA, int NIA, int NDO, Algorithms Algorithm, class Precision>
+Precision* ProblemSolver<NT,SD,NCP,NSP,NISP,NE,NA,NIA,NDO,Algorithm,Precision>::GetDenseOutputTimeIntances() 
+{
+	return this->h_DenseOutputTimeInstances;
+}
+
+template <int NT, int SD, int NCP, int NSP, int NISP, int NE, int NA, int NIA, int NDO, Algorithms Algorithm, class Precision>
+Precision* ProblemSolver<NT,SD,NCP,NSP,NISP,NE,NA,NIA,NDO,Algorithm,Precision>::GetDenseOutputStates() 
+{
+	return this->h_DenseOutputStates;
+}
+
 // --- AUXILIARY FUNCTIONS ---
 
 template <class DataType>
